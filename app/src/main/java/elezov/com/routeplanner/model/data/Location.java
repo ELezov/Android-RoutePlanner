@@ -1,4 +1,4 @@
-package elezov.com.routeplanner.Direction;
+package elezov.com.routeplanner.model.data;
 
 /**
  * Created by USER on 19.02.2017.

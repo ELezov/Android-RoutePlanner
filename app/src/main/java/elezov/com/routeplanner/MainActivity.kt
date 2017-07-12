@@ -4,7 +4,6 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
-import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
 import android.support.v4.app.ActivityCompat
 import android.support.v4.view.GravityCompat
@@ -16,7 +15,6 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import com.google.android.gms.maps.*
-import android.Manifest
 import android.content.Context
 import android.graphics.Color
 import android.location.LocationManager
@@ -30,6 +28,10 @@ import com.google.android.gms.maps.model.PolylineOptions
 import elezov.com.routeplanner.Direction.*
 import elezov.com.routeplanner.Instruction.DirectionInstructionActivity
 import elezov.com.routeplanner.Place.Geometry
+import elezov.com.routeplanner.model.data.Directions
+import elezov.com.routeplanner.model.data.Location
+import elezov.com.routeplanner.model.data.RouteDecode
+import elezov.com.routeplanner.model.data.Steps
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -228,9 +230,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val call = service.getJson(lat1!!.toString() + "," + lon1!!.toString(), lat2!!.toString() + "," + lon2!!.toString(), waypoint)
         Log.v("URL", call.request().url().toString())
-        call.enqueue(object : Callback<DirectionResults> {
+        call.enqueue(object : Callback<Directions> {
 
-            override fun onResponse(call: Call<DirectionResults>, response: Response<DirectionResults>) {
+            override fun onResponse(call: Call<Directions>, response: Response<Directions>) {
                 Log.v("URL", "" + call.request().url().toString())
                 val directionResults = response.body()
                 var routelist = ArrayList<LatLng>()
@@ -294,7 +296,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             }
 
-            override fun onFailure(call: Call<DirectionResults>, t: Throwable) {
+            override fun onFailure(call: Call<Directions>, t: Throwable) {
 
             }
         })

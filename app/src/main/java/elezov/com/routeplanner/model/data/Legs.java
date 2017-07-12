@@ -1,4 +1,4 @@
-package elezov.com.routeplanner.Direction;
+package elezov.com.routeplanner.model.data;
 
 import java.util.List;
 

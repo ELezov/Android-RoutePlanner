@@ -1,0 +1,18 @@
+package elezov.com.routeplanner.Direction;
+
+/**
+ * Created by USER on 19.02.2017.
+ */
+
+public class Location {
+    private double lat;
+    private double lng;
+
+    public double getLat() {
+        return lat;
+    }
+
+    public double getLng() {
+        return lng;
+    }
+}

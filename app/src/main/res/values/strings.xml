@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">RoutePlanner</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyD4LHN3dqnCOFM9z2loaj3QB_jV2S2ivxk</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_search_place">SearchPlaceActivity</string>
+    <string name="title_activity_direction_instruction">DirectionInstruction</string>
+
+</resources>

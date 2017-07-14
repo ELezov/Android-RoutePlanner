@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import elezov.com.routeplanner.View.MainActivity;
+
 public class LoginActivity extends AppCompatActivity {
 
     @Override
@@ -34,6 +36,8 @@ public class LoginActivity extends AppCompatActivity {
         } else {
             Log.e("DB", "PERMISSION GRANTED");
         }
+
+
 
 
     }

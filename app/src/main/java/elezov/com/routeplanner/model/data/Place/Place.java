@@ -1,4 +1,4 @@
-package elezov.com.routeplanner.Place;
+package elezov.com.routeplanner.model.data.Place;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

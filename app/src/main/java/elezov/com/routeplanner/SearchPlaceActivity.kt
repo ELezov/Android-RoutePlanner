@@ -9,14 +9,11 @@ import android.location.Location
 import android.location.LocationManager
 import android.os.Build
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
 import android.util.Log
-import android.view.View
 import com.google.android.gms.common.api.Status
 import com.google.android.gms.location.places.Place
 import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment
@@ -30,6 +27,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.maps.android.SphericalUtil
+import elezov.com.routeplanner.View.MainActivity
 
 class SearchPlaceActivity : AppCompatActivity(),PlaceSelectionListener {
 
@@ -145,7 +143,7 @@ class SearchPlaceActivity : AppCompatActivity(),PlaceSelectionListener {
     }
 
     override fun onBackPressed() {
-        var intent= Intent(applicationContext,MainActivity::class.java)
+        var intent= Intent(applicationContext, MainActivity::class.java)
         startActivity(intent)
         super.onBackPressed()
     }
